@@ -1,0 +1,2 @@
+dubbofilter=aa.mine.web.dubbo.filter.DubboFilter
+filter=aa.mine.web.dubbo.filter.DubboFilter

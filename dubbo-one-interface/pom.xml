@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>aa.mine</groupId>
+		<artifactId>dubbo</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<artifactId>dubbo-one-interface</artifactId>
+	<name>dubbo-one-interface</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>aa.mine</groupId>
+			<artifactId>dubbo-one-model</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		
+		<!-- 加载spring data，完成分页接口定义 -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>1.10.2.RELEASE</version>
+		</dependency>
+		
+	</dependencies>
+
+	<build>
+		<finalName>dubbo-one-interface</finalName>
+	</build>
+</project>

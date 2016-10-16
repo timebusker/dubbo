@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://code.alibabatech.com/schema/dubbo
+         http://code.alibabatech.com/schema/dubbo/dubbo.xsd"
+	    default-autowire="byName" >
+	<!-- 指定自动装配方式为byName -->
+
+	<!-- 提供方应用信息，用于计算依赖关系 -->
+	<dubbo:application name="dubbo-one-service" />
+	<!-- 使用zookeeper广播注册中心暴露服务地址-->
+	<!-- 使用zookeeper注册中心暴露服务地址 -->
+	<dubbo:registry protocol="zookeeper" address="${dubbo.registry.address}" />
+	<!-- 用dubbo协议在20880端口暴露服务 -->
+	<dubbo:protocol name="dubbo" port="20880" />
+	<!-- 设置dubbo过滤器 -->
+	<dubbo:provider filter="dubbofilter,filter" timeout="1000" retries="2"/>
+	
+	<!-- 暴露服务的服务列表 -->
+	<dubbo:service interface="aa.mine.interfaces.MessageService" ref="messgaeServiceImpl" />
+	<dubbo:service interface="aa.mine.interfaces.QueryWithPage" ref="queryWithPageImpl"/>
+	<dubbo:service interface="aa.mine.interfaces.MenuService" ref="menuServiceImpl"/>
+</beans>

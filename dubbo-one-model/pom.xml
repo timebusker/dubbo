@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>aa.mine</groupId>
+		<artifactId>dubbo</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<artifactId>dubbo-one-model</artifactId>
+	<name>dubbo-one-model</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<dependencies>
+
+		<!-- 使用这个会报错 Dependancy error result in NoSuchMethodError: PersistenceUnitInfo.getSharedCacheMode()Ljavax/persistence/SharedCacheMode -->
+		<!-- <dependency> <groupId>javax.persistence</groupId> <artifactId>persistence-api</artifactId> 
+			<version>1.0</version> </dependency> -->
+
+		<dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.1-api</artifactId>
+			<version>1.0.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>5.0.9.Final</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>dubbo-one-model</finalName>
+	</build>
+</project>

@@ -1,0 +1,2 @@
+dubbofilter=aa.mine.service.dubbo.filter.DubboFilter
+filter=aa.mine.service.dubbo.filter.DubboFilter
